@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {BrowserRouter, Route, Redirect} from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
 import ScrollToTop from './lib/ScrollToTop';
+import Example from './containers/Example';
 
 const App = () => (
   <BrowserRouter>
     <ScrollToTop>
       <main>
-        {/* <Route path="/web" component={Web} /> */}
+        <Route path="/" component={Example} />
+        <Route path="/web" component={Example} />
       </main>
     </ScrollToTop>
   </BrowserRouter>
