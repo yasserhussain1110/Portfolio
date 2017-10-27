@@ -1,0 +1,11 @@
+.side-nav-bar {
+  min-height: 100vh;
+  background-color: red;
+
+  .side-nav-content {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    display: flex;
+  }
+}
