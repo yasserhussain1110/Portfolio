@@ -10,7 +10,7 @@ const App = () => (
     <div className="row">
       <SideNavBar />
       <ScrollToTop>
-        <main className="col-md-10">
+        <main className="col-md-10 route-holder">
           <Route path="/" component={Home} />
           <Route path="/web" component={Example} />
         </main>
