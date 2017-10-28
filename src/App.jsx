@@ -12,9 +12,9 @@ const App = () => (
       <ScrollToTop>
         <main className="col-md-10 route-holder">
           <Switch>
-            <Route path="/" component={Home} />
             <Route path="/portfolio" component={Example} />
             <Route path="/contact" component={Example} />
+            <Route path="/" component={Home} />
           </Switch>
         </main>
       </ScrollToTop>
