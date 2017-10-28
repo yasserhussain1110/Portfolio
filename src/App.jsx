@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ScrollToTop from './lib/ScrollToTop';
 import Example from './containers/Example';
 import SideNavBar from './containers/SideNavBar';
@@ -11,8 +11,11 @@ const App = () => (
       <SideNavBar />
       <ScrollToTop>
         <main className="col-md-10 route-holder">
-          <Route path="/" component={Home} />
-          <Route path="/web" component={Example} />
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/portfolio" component={Example} />
+            <Route path="/contact" component={Example} />
+          </Switch>
         </main>
       </ScrollToTop>
     </div>
