@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 const SideNavBar = () => (
-  <div className="col-md-2 side-nav-bar">
+  <div className="col-md-2 hidden-sm hidden-xs side-nav-bar">
     <div className="text-center col-md-2 side-nav-content">
       <header className="photo">
         <img alt="avatar" src="/static/img/me.jpg" />

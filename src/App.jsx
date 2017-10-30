@@ -5,11 +5,13 @@ import SideNavBar from './containers/SideNavBar';
 import Home from './containers/Home';
 import Contact from './containers/Contact';
 import Portfolio from './containers/Portfolio';
+import MobileMenuContainer from './containers/MobileMenuContainer';
 
 const App = () => (
   <BrowserRouter>
     <div className="row">
       <SideNavBar />
+      <MobileMenuContainer />
       <ScrollToTop>
         <main className="col-md-10 route-holder">
           <Switch>
