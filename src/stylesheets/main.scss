@@ -3,7 +3,10 @@
 @import "~flexboxgrid/dist/flexboxgrid";
 @import "~font-awesome/scss/font-awesome";
 @import "~animate.css/animate";
+@import "~devicon-2.2/devicon.css";
 
 @import 'base';
 @import "container/side-nav-bar";
 @import "container/home";
+@import "container/portfolio";
+@import "container/contact";
