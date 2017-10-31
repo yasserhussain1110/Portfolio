@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import PROJECTS from '../lib/data/projects';
 
@@ -12,6 +11,7 @@ class PortfolioContent extends Component {
     };
 
     this.changeSelectedType = this.changeSelectedType.bind(this);
+    this.isLinkSelected = this.isLinkSelected.bind(this);
   }
 
   getSelectedProjects() {
@@ -19,6 +19,10 @@ class PortfolioContent extends Component {
     return PROJECTS.filter(p => selectedType === 'all' ||
     p.mainType === selectedType ||
     p.otherTypes.includes(selectedType));
+  }
+
+  isLinkSelected(link) {
+    return this.state.selectedType === link;
   }
 
   changeSelectedType(e, newType) {
@@ -31,40 +35,89 @@ class PortfolioContent extends Component {
       <PortfolioContentView
         changeSelectedType={this.changeSelectedType}
         projects={this.getSelectedProjects()}
+        isLinkSelected={this.isLinkSelected}
       />
     );
   }
 }
 
-const PortfolioContentView = ({projects, changeSelectedType}) => (
+const activeClassHelper = (isLinkSelected, arg) => (isLinkSelected(arg) ? 'active' : '');
+
+const PortfolioContentView = ({projects, changeSelectedType, isLinkSelected}) => (
   <div className="portfolio-content col-xs-12">
     <div className="link-holder">
       <ul className="row">
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'all')} to="">All</NavLink>
+          <a
+            className={activeClassHelper(isLinkSelected, 'all')}
+            onClick={e => changeSelectedType(e, 'all')}
+            href=""
+          >
+            All
+          </a>
         </li>
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'ngo')} to="">NGO Project</NavLink>
+          <a
+            className={activeClassHelper(isLinkSelected, 'ngo')}
+            onClick={e => changeSelectedType(e, 'ngo')}
+            href=""
+          >
+            NGO Project
+          </a>
         </li>
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'fullStack')} to="">
+          <a
+            className={activeClassHelper(isLinkSelected, 'fullStack')}
+            onClick={e => changeSelectedType(e, 'fullStack')}
+            href=""
+          >
             Full Stack Projects
-          </NavLink>
+          </a>
         </li>
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'react')} to="">React</NavLink>
+          <a
+            className={activeClassHelper(isLinkSelected, 'react')}
+            onClick={e => changeSelectedType(e, 'react')}
+            href=""
+          >
+            React
+          </a>
         </li>
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'vue')} to="">Vue</NavLink>
+          <a
+            className={activeClassHelper(isLinkSelected, 'vue')}
+            onClick={e => changeSelectedType(e, 'vue')}
+            href=""
+          >
+            Vue
+          </a>
         </li>
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'jquery')} to="">JQuery</NavLink>
+          <a
+            className={activeClassHelper(isLinkSelected, 'jquery')}
+            onClick={e => changeSelectedType(e, 'jquery')}
+            href=""
+          >
+            JQuery
+          </a>
         </li>
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'd3')} to="">D3</NavLink>
+          <a
+            className={activeClassHelper(isLinkSelected, 'd3')}
+            onClick={e => changeSelectedType(e, 'd3')}
+            href=""
+          >
+            D3
+          </a>
         </li>
         <li className="col-xs">
-          <NavLink onClick={e => changeSelectedType(e, 'backEnd')} to="">Backend API</NavLink>
+          <a
+            className={activeClassHelper(isLinkSelected, 'backEnd')}
+            onClick={e => changeSelectedType(e, 'backEnd')}
+            href=""
+          >
+            Backend API
+          </a>
         </li>
       </ul>
     </div>
@@ -94,7 +147,8 @@ const ProjectHolder = ({name, description, bgImageUrl, liveUrl, codeUrl}) => (
 
 PortfolioContentView.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.object).isRequired,
-  changeSelectedType: PropTypes.func.isRequired
+  changeSelectedType: PropTypes.func.isRequired,
+  isLinkSelected: PropTypes.func.isRequired
 };
 
 ProjectHolder.propTypes = {

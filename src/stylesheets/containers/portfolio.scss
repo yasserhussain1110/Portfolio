@@ -1,40 +1,22 @@
 .portfolio {
-
-  li {
-    display: inline-block;
+  .portfolio-header {
+    padding: 10px 0;
   }
 
-  .project {
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-    margin: 10px 0;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  h1 {
+    margin: 0;
+    font-weight: bolder;
+    font-size: 32px;
   }
 
-  .project-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    background-color: #EEE;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  .profile-links {
+    font-style: italic;
+    font-size: 14px;
   }
 
-  .project:hover .project-info {
-    opacity: 1;
+  .profile-links > a {
+    color: #FB9591;
   }
 
-  img {
-    max-width: 100%;
-  }
+  @import '../components/portfolio-content';
 }
