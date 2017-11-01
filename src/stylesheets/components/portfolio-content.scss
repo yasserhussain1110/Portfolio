@@ -6,33 +6,41 @@
     text-align: center;
   }
 
+  .project-holder {
+    position: relative;
+    padding: 5px;
+  }
+
   .project {
     overflow: hidden;
     text-align: center;
-    position: relative;
-    margin: 10px 0;
-    height: 200px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
 
+  .project:before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* initial ratio of 1:1*/
+  }
+
   .project-info {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
     opacity: 0;
     background-color: #EEE;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    text-align: center;
   }
 
-  .project:hover .project-info {
+  .project-holder:hover .project-info {
     opacity: 1;
   }
 
@@ -61,6 +69,20 @@
 
     .hide-on-small {
       display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .project-info {
+      position: static;
+      display: block;
+      opacity: 1;
+      background-color: inherit;
+      text-align: center;
+
+      span {
+        display: block;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 // backend implies just backend, no frontend libs like react, i.e. mostly api apps
 
 export default [{
-  name: 'URLShortenerMicroservice',
+  name: 'URLShortener Microservice',
   description: 'A micro service written in Elixir/Phoenix which shortens URLs',
   bgImageUrl: '/static/img/projects/backEnd/elixir-url-short.png',
   liveUrl: 'https://elixir-url-shortener.herokuapp.com',
@@ -9,7 +9,7 @@ export default [{
   mainType: 'backEnd',
   otherTypes: []
 }, {
-  name: 'ImageSearchAbstractionLayer',
+  name: 'ImageSearch AbstractionLayer',
   description: 'A micro service API written in Elixir/Phoenix for searching images',
   bgImageUrl: '/static/img/projects/backEnd/elixir-image-search.png',
   liveUrl: 'https://elixir-image-search.herokuapp.com',
@@ -17,7 +17,7 @@ export default [{
   mainType: 'backEnd',
   otherTypes: []
 }, {
-  name: 'TimestampMicroservice',
+  name: 'Timestamp Microservice',
   description: 'A micro service written in Elixir/Phoenix for converting timestamps',
   bgImageUrl: '/static/img/projects/backEnd/elixir-timestamp.png',
   liveUrl: 'https://elixir-time-stamp.herokuapp.com/',
@@ -25,7 +25,7 @@ export default [{
   mainType: 'backEnd',
   otherTypes: []
 }, {
-  name: 'FileMetadataMicroservice',
+  name: 'FileMetadata Microservice',
   description: 'A micro service written in Elixir/Phoenix which grabs a file\'s metadata',
   bgImageUrl: '/static/img/projects/backEnd/elixir-file-meta.png',
   liveUrl: 'https://elixir-file-metadata.herokuapp.com',
@@ -41,7 +41,7 @@ export default [{
   mainType: 'backEnd',
   otherTypes: []
 }, {
-  name: 'URLShortenerMicroservice',
+  name: 'URLShortener Microservice',
   description: 'A micro service which shortens URLs',
   bgImageUrl: '/static/img/projects/backEnd/url-shorten.png',
   liveUrl: 'https://yasser-url-shortener.herokuapp.com',
@@ -49,7 +49,7 @@ export default [{
   mainType: 'backEnd',
   otherTypes: []
 }, {
-  name: 'ImageSearchAbstractionLayer',
+  name: 'ImageSearch AbstractionLayer',
   description: 'A micro service API for searching images',
   bgImageUrl: '/static/img/projects/backEnd/img-search.png',
   liveUrl: 'https://yasser-image-search.herokuapp.com',
@@ -57,7 +57,7 @@ export default [{
   mainType: 'backEnd',
   otherTypes: []
 }, {
-  name: 'TimestampMicroservice',
+  name: 'Timestamp Microservice',
   description: 'A micro service for converting timestamps',
   bgImageUrl: '/static/img/projects/backEnd/timestamp.png',
   liveUrl: 'https://yasser-timestamp-ms.herokuapp.com',
@@ -65,7 +65,7 @@ export default [{
   mainType: 'backEnd',
   otherTypes: []
 }, {
-  name: 'FileMetadataMicroservice',
+  name: 'FileMetadata Microservice',
   description: 'A micro service which grabs a file\'s metadata',
   bgImageUrl: '/static/img/projects/backEnd/file-meta.png',
   liveUrl: 'https://yasser-file-metadata.herokuapp.com',

@@ -168,17 +168,16 @@ const PortfolioContentView = ({projects, changeSelectedType, isLinkSelected}) =>
 );
 
 const ProjectHolder = ({name, description, bgImageUrl, liveUrl, codeUrl}) => (
-  <div className="col-md-4 col-sm-6 col-xs-12">
+  <div className="col-md-4 col-sm-6 col-xs-12 project-holder">
     <div
       className="project"
       style={{backgroundImage: `url(${bgImageUrl})`}}
-    >
-      <div className="project-info">
-        <h3>{name}</h3>
-        <small>{description}</small>
-        <a href={liveUrl}>See it Live</a>
-        <a href={codeUrl}>See Source</a>
-      </div>
+    />
+    <div className="project-info">
+      <h3>{name}</h3>
+      <small>{description}</small>
+      <span><a href={liveUrl}>See it Live</a></span>
+      <span><a href={codeUrl}>See Source</a></span>
     </div>
   </div>
 );
