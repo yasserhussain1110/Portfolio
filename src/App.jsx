@@ -13,7 +13,7 @@ const App = () => (
       <SideNavBar />
       <MobileMenuContainer />
       <ScrollToTop>
-        <main className="col-xs-12 col-md-10 route-holder">
+        <main className="col-xs col-md-10 route-holder">
           <Switch>
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />

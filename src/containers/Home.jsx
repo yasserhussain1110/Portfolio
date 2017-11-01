@@ -17,7 +17,7 @@ const Home = () => (
     </div>
 
     <div className="about-me-holder row middle-xs">
-      <div className="col-md-3 icon-holder">
+      <div className="col-md-3 col-xs-12 section-name">
         <h6>How it all started</h6>
         <h2>About Me</h2>
         <div className="row skills-container">
@@ -51,6 +51,8 @@ const Home = () => (
           <div className="col-xs">
             <i title="Webpack" className="devicon-webpack-plain" />
           </div>
+        </div>
+        <div className="row skills-container">
           <div className="col-xs">
             <i title="Bootstrap" className="devicon-bootstrap-plain" />
           </div>
@@ -85,7 +87,7 @@ const Home = () => (
       </div>
 
 
-      <div className="col-md-9 text-holder">
+      <div className="col-md-9 col-xs-12 text-holder">
         <p>
           I am a software developer based in Bangalore, India. I worked as Java/MySQL developer
           for a few years when a friend of mine introduced me to&nbsp;
@@ -106,7 +108,7 @@ const Home = () => (
         <p>
           After learning about the NodeJS ecosystem I started to build a few projects with it.
           You can see my projects here&nbsp;
-          <NavLink to="/portfolio"><span className="special">Portfolio </span></NavLink>.
+          <NavLink to="/portfolio"><span className="special">Portfolio</span></NavLink>.
           Then finally I built a full stack <span className="special">Web Application</span> for an
           NGO to consolidate what I had learned. You can see it here&nbsp;
           <a href="http://www.sonasarovartrust.org">
@@ -123,13 +125,13 @@ const Home = () => (
 
 
     <div className="more-info-holder row middle-xs">
-      <div className="col-md-3 icon-holder">
+      <div className="col-md-3 col-xs-12 section-name">
         <h6>PROVIDING VARIOUS SERVICES</h6>
         <h2>Tech I have worked with</h2>
       </div>
 
 
-      <div className="col-md-9 text-holder">
+      <div className="col-md-9 col-xs-12 text-holder">
         <p>
           As I mentioned above I have experience in working with Java/MySQL, also I have done
           web scraping with <span className="special">Perl</span>&nbsp;
@@ -150,12 +152,12 @@ const Home = () => (
     </div>
 
     <div className="interest-info-holder row middle-xs">
-      <div className="col-md-3 icon-holder">
+      <div className="col-md-3 col-xs-12 section-name">
         <h2>Technologies that excite me</h2>
       </div>
 
 
-      <div className="col-md-9 text-holder">
+      <div className="col-md-9 col-xs-12 text-holder">
         <p>
           I love functional programming. See some of my publication related with function
           programming on&nbsp;
@@ -169,7 +171,7 @@ const Home = () => (
           I have started learning a new functional programming language and framework&nbsp;
           <span className="special">Elixir</span> & <span className="special">Phoenix</span>.&nbsp;
           See some of my projects with them on my&nbsp;
-          <NavLink to="/portfolio"><span className="special">Portfolio </span></NavLink>.
+          <NavLink to="/portfolio"><span className="special">Portfolio</span></NavLink>.
         </p>
       </div>
     </div>

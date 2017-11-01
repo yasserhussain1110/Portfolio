@@ -19,7 +19,7 @@ class MobileMenuContainer extends Component {
   render() {
     const {menuOpened} = this.state;
     return (
-      <div className={`mobile-menu-container hidden-md hidden-lg${menuOpened ? ' open' : ''}`}>
+      <div className={`mobile-menu-container${menuOpened ? ' open' : ''}`}>
         <nav className="mobile-menu">
           <ul>
             <li><NavLink to="/">Home</NavLink></li>

@@ -4,6 +4,7 @@
   right: 0;
   width: 100px;
   z-index: 1;
+  display: none;
 
   ul {
     list-style: none;
@@ -55,6 +56,10 @@
 
   ul {
     display: none;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    display: block;
   }
 }
 
