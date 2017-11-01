@@ -83,6 +83,45 @@ const PortfolioContentView = ({projects, changeSelectedType, isLinkSelected}) =>
             React
           </a>
         </li>
+        <li className="col-xs hide-on-small">
+          <a
+            className={activeClassHelper(isLinkSelected, 'vue')}
+            onClick={e => changeSelectedType(e, 'vue')}
+            href=""
+          >
+            Vue
+          </a>
+        </li>
+        <li className="col-xs hide-on-small">
+          <a
+            className={activeClassHelper(isLinkSelected, 'jquery')}
+            onClick={e => changeSelectedType(e, 'jquery')}
+            href=""
+          >
+            JQuery
+          </a>
+        </li>
+        <li className="col-xs hide-on-small">
+          <a
+            className={activeClassHelper(isLinkSelected, 'd3')}
+            onClick={e => changeSelectedType(e, 'd3')}
+            href=""
+          >
+            D3
+          </a>
+        </li>
+        <li className="col-xs hide-on-small">
+          <a
+            className={activeClassHelper(isLinkSelected, 'backEnd')}
+            onClick={e => changeSelectedType(e, 'backEnd')}
+            href=""
+          >
+            Backend API
+          </a>
+        </li>
+      </ul>
+
+      <ul className="row second-line-links show-on-small">
         <li className="col-xs">
           <a
             className={activeClassHelper(isLinkSelected, 'vue')}
