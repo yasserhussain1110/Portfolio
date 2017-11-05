@@ -67,7 +67,7 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         <li className="col-xs">
           <NavLink
             className={activeClassHelper(isLinkSelected, 'fullStack')}
-            to="/portfolio/fullStack"
+            to="/portfolio/full-stack"
           >
             Full Stack Projects
           </NavLink>
@@ -107,7 +107,7 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         <li className="col-xs hide-on-small">
           <NavLink
             className={activeClassHelper(isLinkSelected, 'backEnd')}
-            to="/portfolio/backEnd"
+            to="/portfolio/back-end"
           >
             Backend API
           </NavLink>
@@ -142,7 +142,7 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         <li className="col-xs">
           <NavLink
             className={activeClassHelper(isLinkSelected, 'backEnd')}
-            to="/portfolio/backEnd"
+            to="/portfolio/back-end"
           >
             Backend API
           </NavLink>

@@ -22,7 +22,7 @@ const Portfolio = () => (
       <Switch>
         <Route path="/portfolio/ngo" render={() => <PortfolioContent selectedType="ngo" />} />
         <Route
-          path="/portfolio/fullStack"
+          path="/portfolio/full-stack"
           render={() => <PortfolioContent selectedType="fullStack" />}
         />
         <Route path="/portfolio/react" render={() => <PortfolioContent selectedType="react" />} />
@@ -30,7 +30,7 @@ const Portfolio = () => (
         <Route path="/portfolio/jquery" render={() => <PortfolioContent selectedType="jquery" />} />
         <Route path="/portfolio/d3" render={() => <PortfolioContent selectedType="d3" />} />
         <Route
-          path="/portfolio/backEnd"
+          path="/portfolio/back-end"
           render={() => <PortfolioContent selectedType="backEnd" />}
         />
         <Route path="/portfolio" render={() => <PortfolioContent selectedType="all" />} />
