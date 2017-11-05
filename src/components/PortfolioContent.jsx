@@ -42,23 +42,19 @@ class PortfolioContent extends Component {
   }
 }
 
-const activeClassHelper = (isLinkSelected, arg) => (isLinkSelected(arg) ? 'active' : '');
-
-const PortfolioContentView = ({projects, isLinkSelected}) => (
+const PortfolioContentView = ({projects}) => (
   <div className="portfolio-content col-xs-12">
     <div className="link-holder">
       <ul className="row">
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'all')}
-            to="/portfolio"
+            to="/portfolio/all"
           >
             All
           </NavLink>
         </li>
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'ngo')}
             to="/portfolio/ngo"
           >
             NGO Project
@@ -66,7 +62,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'fullStack')}
             to="/portfolio/full-stack"
           >
             Full Stack Projects
@@ -74,7 +69,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'react')}
             to="/portfolio/react"
           >
             React
@@ -82,7 +76,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs hide-on-small">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'vue')}
             to="/portfolio/vue"
           >
             Vue
@@ -90,7 +83,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs hide-on-small">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'jquery')}
             to="/portfolio/jquery"
           >
             JQuery
@@ -98,7 +90,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs hide-on-small">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'd3')}
             to="/portfolio/d3"
           >
             D3
@@ -106,7 +97,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs hide-on-small">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'backEnd')}
             to="/portfolio/back-end"
           >
             Backend API
@@ -117,7 +107,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
       <ul className="row second-line-links show-on-small">
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'vue')}
             to="/portfolio/vue"
           >
             Vue
@@ -125,7 +114,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'jquery')}
             to="/portfolio/jquery"
           >
             JQuery
@@ -133,7 +121,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'd3')}
             to="/portfolio/d3"
           >
             D3
@@ -141,7 +128,6 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         </li>
         <li className="col-xs">
           <NavLink
-            className={activeClassHelper(isLinkSelected, 'backEnd')}
             to="/portfolio/back-end"
           >
             Backend API
@@ -173,8 +159,7 @@ const ProjectHolder = ({name, description, bgImageUrl, liveUrl, codeUrl}) => (
 
 
 PortfolioContentView.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
-  isLinkSelected: PropTypes.func.isRequired
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 ProjectHolder.propTypes = {

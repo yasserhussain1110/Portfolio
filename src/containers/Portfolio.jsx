@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import PortfolioContent from '../components/PortfolioContent';
 
 const Portfolio = () => (
@@ -33,7 +33,8 @@ const Portfolio = () => (
           path="/portfolio/back-end"
           render={() => <PortfolioContent selectedType="backEnd" />}
         />
-        <Route path="/portfolio" render={() => <PortfolioContent selectedType="all" />} />
+        <Route path="/portfolio/all" render={() => <PortfolioContent selectedType="all" />} />
+        <Route path="/portfolio" render={() => <Redirect to="/portfolio/all" />} />
       </Switch>
     </div>
   </div>
