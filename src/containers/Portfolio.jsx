@@ -30,8 +30,8 @@ const Portfolio = () => (
         <Route path="/portfolio/jquery" render={() => <PortfolioContent selectedType="jquery" />} />
         <Route path="/portfolio/d3" render={() => <PortfolioContent selectedType="d3" />} />
         <Route
-          path="/portfolio/backend"
-          render={() => <PortfolioContent selectedType="backend" />}
+          path="/portfolio/backEnd"
+          render={() => <PortfolioContent selectedType="backEnd" />}
         />
         <Route path="/portfolio" render={() => <PortfolioContent selectedType="all" />} />
       </Switch>
