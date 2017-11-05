@@ -25,7 +25,13 @@ const Contact = () => (
         </div>
 
         <div className="value">
-          <p>yasserhussain1110@gmail.com</p>
+          <p>
+            <a
+              href="mailto:yasserhussain1110@gmail.com"
+            >
+              yasserhussain1110@gmail.com
+            </a>
+          </p>
         </div>
       </div>
 
@@ -36,7 +42,15 @@ const Contact = () => (
         </div>
 
         <div className="value">
-          <p>yasserhussain11</p>
+          <p>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://twitter.com/yasserhussain11"
+            >
+              yasserhussain11
+            </a>
+          </p>
         </div>
       </div>
 
@@ -47,7 +61,34 @@ const Contact = () => (
         </div>
 
         <div className="value">
-          <p><a href="https://github.com/yasserhussain1110">yasserhussain1110</a></p>
+          <p>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/yasserhussain1110"
+            >
+              yasserhussain1110
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div className="contact">
+        <div className="field">
+          <i className="fa fa-linkedin" />
+          <strong className="field-name">LinkedIn</strong>
+        </div>
+
+        <div className="value">
+          <p>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/yasser-hussain-41001b45"
+            >
+              yasser-hussain
+            </a>
+          </p>
         </div>
       </div>
 
