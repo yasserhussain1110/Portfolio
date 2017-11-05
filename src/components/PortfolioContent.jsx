@@ -51,7 +51,7 @@ const PortfolioContentView = ({projects, isLinkSelected}) => (
         <li className="col-xs">
           <NavLink
             className={activeClassHelper(isLinkSelected, 'all')}
-            to="/portfolio/all"
+            to="/portfolio"
           >
             All
           </NavLink>
