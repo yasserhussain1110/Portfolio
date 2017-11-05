@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route, Switch} from 'react-router-dom';
 import PortfolioContent from '../components/PortfolioContent';
 
 const Portfolio = () => (
@@ -17,7 +18,24 @@ const Portfolio = () => (
       </h6>
     </div>
 
-    <PortfolioContent />
+    <div className="portfolio-route-holder">
+      <Switch>
+        <Route path="/portfolio/ngo" render={() => <PortfolioContent selectedType="ngo" />} />
+        <Route
+          path="/portfolio/fullStack"
+          render={() => <PortfolioContent selectedType="fullStack" />}
+        />
+        <Route path="/portfolio/react" render={() => <PortfolioContent selectedType="react" />} />
+        <Route path="/portfolio/vue" render={() => <PortfolioContent selectedType="vue" />} />
+        <Route path="/portfolio/jquery" render={() => <PortfolioContent selectedType="jquery" />} />
+        <Route path="/portfolio/d3" render={() => <PortfolioContent selectedType="d3" />} />
+        <Route
+          path="/portfolio/backend"
+          render={() => <PortfolioContent selectedType="backend" />}
+        />
+        <Route path="/portfolio" render={() => <PortfolioContent selectedType="all" />} />
+      </Switch>
+    </div>
   </div>
 );
 

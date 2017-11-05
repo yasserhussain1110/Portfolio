@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {NavLink} from 'react-router-dom';
 import PROJECTS from '../lib/data/projects';
 
 class PortfolioContent extends Component {
@@ -7,11 +8,17 @@ class PortfolioContent extends Component {
     super(props);
 
     this.state = {
-      selectedType: 'all'  // one of all, ngo, fullStack, react, vue, jquery, d3, backEnd
+      // one of all, ngo, fullStack, react, vue, jquery, d3, backEnd
+      selectedType: props.selectedType
     };
 
-    this.changeSelectedType = this.changeSelectedType.bind(this);
     this.isLinkSelected = this.isLinkSelected.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedType !== this.state.selectedType) {
+      this.setState({selectedType: nextProps.selectedType});
+    }
   }
 
   getSelectedProjects() {
@@ -25,15 +32,9 @@ class PortfolioContent extends Component {
     return this.state.selectedType === link;
   }
 
-  changeSelectedType(e, newType) {
-    e.preventDefault();
-    this.setState({selectedType: newType});
-  }
-
   render() {
     return (
       <PortfolioContentView
-        changeSelectedType={this.changeSelectedType}
         projects={this.getSelectedProjects()}
         isLinkSelected={this.isLinkSelected}
       />
@@ -43,120 +44,108 @@ class PortfolioContent extends Component {
 
 const activeClassHelper = (isLinkSelected, arg) => (isLinkSelected(arg) ? 'active' : '');
 
-const PortfolioContentView = ({projects, changeSelectedType, isLinkSelected}) => (
+const PortfolioContentView = ({projects, isLinkSelected}) => (
   <div className="portfolio-content col-xs-12">
     <div className="link-holder">
       <ul className="row">
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'all')}
-            onClick={e => changeSelectedType(e, 'all')}
-            href=""
+            to="/portfolio/all"
           >
             All
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'ngo')}
-            onClick={e => changeSelectedType(e, 'ngo')}
-            href=""
+            to="/portfolio/ngo"
           >
             NGO Project
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'fullStack')}
-            onClick={e => changeSelectedType(e, 'fullStack')}
-            href=""
+            to="/portfolio/fullStack"
           >
             Full Stack Projects
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'react')}
-            onClick={e => changeSelectedType(e, 'react')}
-            href=""
+            to="/portfolio/react"
           >
             React
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs hide-on-small">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'vue')}
-            onClick={e => changeSelectedType(e, 'vue')}
-            href=""
+            to="/portfolio/vue"
           >
             Vue
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs hide-on-small">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'jquery')}
-            onClick={e => changeSelectedType(e, 'jquery')}
-            href=""
+            to="/portfolio/jquery"
           >
             JQuery
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs hide-on-small">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'd3')}
-            onClick={e => changeSelectedType(e, 'd3')}
-            href=""
+            to="/portfolio/d3"
           >
             D3
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs hide-on-small">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'backEnd')}
-            onClick={e => changeSelectedType(e, 'backEnd')}
-            href=""
+            to="/portfolio/backEnd"
           >
             Backend API
-          </a>
+          </NavLink>
         </li>
       </ul>
 
       <ul className="row second-line-links show-on-small">
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'vue')}
-            onClick={e => changeSelectedType(e, 'vue')}
-            href=""
+            to="/portfolio/vue"
           >
             Vue
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'jquery')}
-            onClick={e => changeSelectedType(e, 'jquery')}
-            href=""
+            to="/portfolio/jquery"
           >
             JQuery
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'd3')}
-            onClick={e => changeSelectedType(e, 'd3')}
-            href=""
+            to="/portfolio/d3"
           >
             D3
-          </a>
+          </NavLink>
         </li>
         <li className="col-xs">
-          <a
+          <NavLink
             className={activeClassHelper(isLinkSelected, 'backEnd')}
-            onClick={e => changeSelectedType(e, 'backEnd')}
-            href=""
+            to="/portfolio/backEnd"
           >
             Backend API
-          </a>
+          </NavLink>
         </li>
       </ul>
     </div>
@@ -185,7 +174,6 @@ const ProjectHolder = ({name, description, bgImageUrl, liveUrl, codeUrl}) => (
 
 PortfolioContentView.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.object).isRequired,
-  changeSelectedType: PropTypes.func.isRequired,
   isLinkSelected: PropTypes.func.isRequired
 };
 
@@ -195,6 +183,11 @@ ProjectHolder.propTypes = {
   bgImageUrl: PropTypes.string.isRequired,
   liveUrl: PropTypes.string.isRequired,
   codeUrl: PropTypes.string.isRequired
+};
+
+PortfolioContent.propTypes = {
+  selectedType: PropTypes
+    .oneOf(['all', 'ngo', 'fullStack', 'react', 'vue', 'jquery', 'd3', 'backEnd']).isRequired
 };
 
 
