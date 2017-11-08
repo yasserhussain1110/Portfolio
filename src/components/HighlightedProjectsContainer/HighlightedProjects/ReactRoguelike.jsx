@@ -1,54 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import D3Projects from '../../../lib/data/projects/d3';
+import reactProjects from '../../../lib/data/projects/react';
 
-const FDGraph = D3Projects[1];
+const RogueLike = reactProjects[0];
 
-const ForceDirectedGraph = ({showing}) => (
+const ReactRoguelike = ({showing}) => (
   <div
     style={{display: showing ? 'block' : 'none'}}
-    className="force-directed-graph highlighted-project"
+    className="react-rogue-like highlighted-project"
   >
 
     <div className="col-xs-offset-2 col-xs-8 img-container">
-      <img alt={FDGraph.name} src={FDGraph.bgImageUrl} />
+      <img alt={RogueLike.name} src={RogueLike.bgImageUrl} />
     </div>
 
     <h3 className="col-xs-12 text-center">
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={FDGraph.codeUrl}
+        href={RogueLike.codeUrl}
       >
-        {FDGraph.name}
+        {RogueLike.name}
       </a>
     </h3>
 
     <div className="col-xs-offset-1 col-xs-10 project-details-container">
       <p>
-        {FDGraph.description}.
-      </p>
-
-      <p>
-        This is graph made with <span className="highlight">D3.js</span> which shows a Force
-        &nbsp;Directed Graph of countries which are connected to other countries by land.
+        {RogueLike.description}.
       </p>
 
       <p>
         Technologies used in this app include&nbsp;
-        <span className="highlight">D3.js</span>.
+        <span className="highlight">React</span>.
       </p>
 
       <div>
-        <p><span className="highlight">Force Directed Graph</span> has following features-</p>
+        <p><span className="highlight">ReactRoguelike</span> has following features-</p>
         <ul>
           <li>
-            You can look at all countries represented by their flags
-            &nbsp;connected to each other via land.
+            A <span className="highlight">Dungeon Crawler game</span> with multiple levels.
           </li>
 
           <li>
-            You can move around the flag icons to get a better view.
+            Code for random map generation is <span className="highlight">custom made</span>.
+            &nbsp;That is, no library used.
           </li>
         </ul>
       </div>
@@ -59,7 +54,7 @@ const ForceDirectedGraph = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={FDGraph.codeUrl}
+          href={RogueLike.codeUrl}
           className="highlight"
         >
           Github Page
@@ -72,7 +67,7 @@ const ForceDirectedGraph = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={FDGraph.liveUrl}
+          href={RogueLike.liveUrl}
           className="highlight"
         >
           Live App
@@ -82,8 +77,8 @@ const ForceDirectedGraph = ({showing}) => (
   </div>
 );
 
-ForceDirectedGraph.propTypes = {
+ReactRoguelike.propTypes = {
   showing: PropTypes.bool.isRequired
 };
 
-export default ForceDirectedGraph;
+export default ReactRoguelike;

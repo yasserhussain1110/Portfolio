@@ -1,5 +1,5 @@
 export default [{
-  name: 'Sona Sarovar Project',
+  name: 'Project SonaSarovarTrust',
   description: 'Webapp for a Non-Profit',
   bgImageUrl: '/static/img/projects/ngo/sona.png',
   liveUrl: 'http://sonasarovartrust.org',

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ngoProjects from '../../../lib/data/projects/ngo';
+import NgoProjects from '../../../lib/data/projects/ngo';
+
+const SonaSarovar = NgoProjects[0];
 
 const SonaSarovarTrust = ({showing}) => (
   <div
@@ -9,16 +11,16 @@ const SonaSarovarTrust = ({showing}) => (
   >
 
     <div className="col-xs-offset-2 col-xs-8 img-container">
-      <img alt="Sona Sarovar Trust" src={ngoProjects[0].bgImageUrl} />
+      <img alt={SonaSarovar.name} src={SonaSarovar.bgImageUrl} />
     </div>
 
     <h3 className="col-xs-12 text-center">
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={ngoProjects[0].codeUrl}
+        href={SonaSarovar.codeUrl}
       >
-        SonaSarovarTrust
+        {SonaSarovarTrust.name}
       </a>
     </h3>
 
@@ -30,7 +32,7 @@ const SonaSarovarTrust = ({showing}) => (
           target="_blank"
           rel="noopener noreferrer"
           className="highlight"
-          href={ngoProjects[0].liveUrl}
+          href={SonaSarovar.liveUrl}
         >
           SonaSarovarTrust
         </a>.
@@ -82,7 +84,7 @@ const SonaSarovarTrust = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={ngoProjects[0].codeUrl}
+          href={SonaSarovar.codeUrl}
           className="highlight"
         >
           Github Page
@@ -95,7 +97,7 @@ const SonaSarovarTrust = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={ngoProjects[0].liveUrl}
+          href={SonaSarovar.liveUrl}
           className="highlight"
         >
           Live App

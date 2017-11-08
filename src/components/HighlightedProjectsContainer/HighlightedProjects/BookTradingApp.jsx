@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import fullStack from '../../../lib/data/projects/fullStack';
+import FullStack from '../../../lib/data/projects/fullStack';
+
+const BTApp = FullStack[0];
 
 const BookTradingApp = ({showing}) => (
   <div
@@ -9,22 +11,22 @@ const BookTradingApp = ({showing}) => (
   >
 
     <div className="col-xs-offset-2 col-xs-8 img-container">
-      <img alt="Book Trading App" src={fullStack[0].bgImageUrl} />
+      <img alt={BTApp.name} src={BTApp.bgImageUrl} />
     </div>
 
     <h3 className="col-xs-12 text-center">
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={fullStack[0].codeUrl}
+        href={BTApp.codeUrl}
       >
-        Book Trading App
+        {BTApp.name}
       </a>
     </h3>
 
     <div className="col-xs-offset-1 col-xs-10 project-details-container">
       <p>
-        Book Trading App for trading books.
+        {BTApp.description}
       </p>
 
       <p>
@@ -61,7 +63,7 @@ const BookTradingApp = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={fullStack[0].codeUrl}
+          href={BTApp.codeUrl}
           className="highlight"
         >
           Github Page
@@ -74,7 +76,7 @@ const BookTradingApp = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={fullStack[0].liveUrl}
+          href={BTApp.liveUrl}
           className="highlight"
         >
           Live App
