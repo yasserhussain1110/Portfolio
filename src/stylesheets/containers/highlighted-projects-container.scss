@@ -1,6 +1,4 @@
 .highlighted-projects-container {
-  position: relative;
-
   h1 {
     margin: 20px 0;
     font-weight: bolder;
@@ -8,7 +6,7 @@
   }
 
   .highlighted-projects-wrapper {
-    padding: 10px 0;
+    padding: 0;
   }
 
   .fa:focus {
@@ -16,7 +14,7 @@
   }
 
   .fa-arrow-circle-left, .fa-arrow-circle-right {
-    position: absolute;
+    position: fixed;
     font-size: 30px;
   }
 
@@ -26,12 +24,12 @@
   }
 
   .fa-arrow-circle-left {
-    top: 30%;
-    left: 5%;
+    top: 350px;
+    left: 20%;
   }
 
   .fa-arrow-circle-right {
-    top: 30%;
+    top: 350px;
     right: 5%;
   }
 

@@ -6,7 +6,7 @@ class HighlightedProjectsContainer extends Component {
     super(props);
 
     this.state = {
-      selectedProject: 1
+      selectedProject: 0
     };
 
     this.goPrevious = this.goNumberOfSteps.bind(this, -1);
