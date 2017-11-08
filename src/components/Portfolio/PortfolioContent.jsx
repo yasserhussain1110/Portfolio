@@ -121,8 +121,8 @@ const ProjectHolder = ({name, description, bgImageUrl, liveUrl, codeUrl}) => (
     <div className="project-info">
       <h3>{name}</h3>
       <small>{description}</small>
-      <span><a href={liveUrl}>See it Live</a></span>
-      <span><a href={codeUrl}>See Source</a></span>
+      <span><a target="_blank" rel="noopener noreferrer" href={liveUrl}>See it Live</a></span>
+      <span><a target="_blank" rel="noopener noreferrer" href={codeUrl}>See Source</a></span>
     </div>
   </div>
 );
