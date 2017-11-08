@@ -10,7 +10,7 @@ const ReactRoguelike = ({showing}) => (
     className="react-rogue-like highlighted-project"
   >
 
-    <div className="col-xs-offset-2 col-xs-8 img-container">
+    <div className="col-md-offset-2 col-md-8 img-container">
       <img alt={RogueLike.name} src={RogueLike.bgImageUrl} />
     </div>
 

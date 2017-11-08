@@ -31,7 +31,10 @@ class HighlightedProjectsContainer extends Component {
   render() {
     return (
       <div className="highlighted-projects-container col-xs-12">
-        <h1 className="text-center">HIGHLIGHTED PROJECTS</h1>
+        <div className="highlight-header">
+          <h6 className="text-center">CHECK OUT MY PROJECT HIGHLIGHTS</h6>
+          <h1 className="text-center">HIGHLIGHTED PROJECTS</h1>
+        </div>
         <div className="highlighted-projects-wrapper">
           {
             HighlightedProjects.map(

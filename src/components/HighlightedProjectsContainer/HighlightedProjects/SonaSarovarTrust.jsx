@@ -10,7 +10,7 @@ const SonaSarovarTrust = ({showing}) => (
     className="sona-sarovar-trust highlighted-project"
   >
 
-    <div className="col-xs-offset-2 col-xs-8 img-container">
+    <div className="col-md-offset-2 col-md-8 img-container">
       <img alt={SonaSarovar.name} src={SonaSarovar.bgImageUrl} />
     </div>
 

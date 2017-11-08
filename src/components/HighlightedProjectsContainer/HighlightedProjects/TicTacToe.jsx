@@ -10,7 +10,7 @@ const TicTacToe = ({showing}) => (
     className="book-trading-app highlighted-project"
   >
 
-    <div className="col-xs-offset-2 col-xs-8 img-container">
+    <div className="col-md-offset-2 col-md-8 img-container">
       <img alt={T3.name} src={T3.bgImageUrl} />
     </div>
 

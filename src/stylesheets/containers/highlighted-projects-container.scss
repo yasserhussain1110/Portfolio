@@ -1,12 +1,13 @@
 .highlighted-projects-container {
   h1 {
-    margin: 20px 0;
+    margin: 0;
     font-weight: bolder;
     font-size: 32px;
   }
 
   .highlighted-projects-wrapper {
     padding: 0;
+    margin: 10px 0;
   }
 
   .fa:focus {
@@ -24,13 +25,29 @@
   }
 
   .fa-arrow-circle-left {
-    top: 350px;
+    top: 320px;
     left: 20%;
   }
 
   .fa-arrow-circle-right {
-    top: 350px;
+    top: 320px;
     right: 5%;
+  }
+
+  .highlight-header {
+    padding: 10px 0;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    .fa-arrow-circle-left {
+      top: 260px;
+      left: 5%;
+    }
+
+    .fa-arrow-circle-right {
+      top: 260px;
+      right: 5%;
+    }
   }
 
   @import "../components/highlighted-projects-container/highlighted-project.scss";

@@ -44,4 +44,12 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  @media only screen and (max-width: 1023px) {
+    .img-container:before {
+      content: "";
+      display: block;
+      padding-top: 70%; /* initial ratio of 1:1*/
+    }
+  }
 }
