@@ -23,6 +23,7 @@ class MobileMenuContainer extends Component {
         <nav className="mobile-menu">
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/highlights">Highlights</NavLink></li>
             <li><NavLink to="/portfolio">Portfolio</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
