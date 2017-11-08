@@ -14,6 +14,7 @@
     padding-top: 50%; /* initial ratio of 1:1*/
   }
 
+  // Remove height: 100% to remove stretching
   img {
     position: absolute;
     top: 0;
