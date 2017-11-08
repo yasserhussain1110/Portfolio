@@ -6,6 +6,7 @@ import Home from './containers/Home';
 import Contact from './containers/Contact';
 import Portfolio from './containers/Portfolio';
 import MobileMenuContainer from './containers/MobileMenuContainer';
+import HighlightedProjects from './containers/HighlightedProjectsContainer';
 
 const App = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => (
           <Switch>
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />
+            <Route path="/highlights" component={HighlightedProjects} />
             <Route path="/" component={Home} />
           </Switch>
         </main>

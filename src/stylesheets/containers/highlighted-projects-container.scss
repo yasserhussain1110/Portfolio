@@ -1,0 +1,39 @@
+.highlighted-projects-container {
+  position: relative;
+
+  h1 {
+    margin: 20px 0;
+    font-weight: bolder;
+    font-size: 32px;
+  }
+
+  .highlighted-projects-wrapper {
+    padding: 10px 0;
+  }
+
+  .fa:focus {
+    outline: none;
+  }
+
+  .fa-arrow-circle-left, .fa-arrow-circle-right {
+    position: absolute;
+    font-size: 30px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .fa-arrow-circle-left {
+    top: 30%;
+    left: 5%;
+  }
+
+  .fa-arrow-circle-right {
+    top: 30%;
+    right: 5%;
+  }
+
+  @import "../components/highlighted-projects-container/highlighted-project.scss";
+}

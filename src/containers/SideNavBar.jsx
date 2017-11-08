@@ -12,6 +12,7 @@ const SideNavBar = () => (
       <section className="nav">
         <ul className="link-list">
           <li><NavLink to="/">HOME</NavLink></li>
+          <li><NavLink to="/highlights">HIGHLIGHTS</NavLink></li>
           <li><NavLink to="/portfolio">PORTFOLIO</NavLink></li>
           <li><NavLink to="/contact">CONTACT</NavLink></li>
         </ul>

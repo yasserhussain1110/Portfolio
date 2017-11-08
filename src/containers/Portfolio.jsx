@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
-import PortfolioContent from '../components/PortfolioContent';
+import PortfolioContent from '../components/Portfolio/PortfolioContent';
 
 const Portfolio = () => (
   <div className="portfolio row">

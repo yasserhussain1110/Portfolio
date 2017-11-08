@@ -91,6 +91,9 @@
     "no-useless-constructor": [
       "off"
     ],
+    "global-require": [
+      "off"
+    ],
     "react/forbid-prop-types": [
       "off"
     ],

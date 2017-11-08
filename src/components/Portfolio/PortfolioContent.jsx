@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
-import PROJECTS from '../lib/data/projects';
+import PROJECTS from '../../lib/data/projects';
 
 const getSelectedProjects = selectedType => {
   return PROJECTS.filter(p => selectedType === 'all' ||
