@@ -1,48 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import PROJECTS from '../lib/data/projects';
 
-class PortfolioContent extends Component {
-  constructor(props) {
-    super(props);
+const getSelectedProjects = selectedType => {
+  return PROJECTS.filter(p => selectedType === 'all' ||
+  p.mainType === selectedType ||
+  p.otherTypes.includes(selectedType));
+};
 
-    this.state = {
-      // one of all, ngo, fullStack, react, vue, jquery, d3, backEnd
-      selectedType: props.selectedType
-    };
-
-    this.isLinkSelected = this.isLinkSelected.bind(this);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.selectedType !== this.state.selectedType) {
-      this.setState({selectedType: nextProps.selectedType});
-    }
-  }
-
-  getSelectedProjects() {
-    const {selectedType} = this.state;
-    return PROJECTS.filter(p => selectedType === 'all' ||
-    p.mainType === selectedType ||
-    p.otherTypes.includes(selectedType));
-  }
-
-  isLinkSelected(link) {
-    return this.state.selectedType === link;
-  }
-
-  render() {
-    return (
-      <PortfolioContentView
-        projects={this.getSelectedProjects()}
-        isLinkSelected={this.isLinkSelected}
-      />
-    );
-  }
-}
-
-const PortfolioContentView = ({projects}) => (
+const PortfolioContent = ({selectedType}) => (
   <div className="portfolio-content col-xs-12">
     <div className="link-holder">
       <ul className="row">
@@ -137,7 +104,10 @@ const PortfolioContentView = ({projects}) => (
     </div>
 
     <div className="project-list row">
-      {projects.map((project, index) => <ProjectHolder key={index} {...project} />)}
+      {
+        getSelectedProjects(selectedType)
+          .map((project, index) => <ProjectHolder key={index} {...project} />)
+      }
     </div>
   </div>
 );
@@ -157,11 +127,6 @@ const ProjectHolder = ({name, description, bgImageUrl, liveUrl, codeUrl}) => (
   </div>
 );
 
-
-PortfolioContentView.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.object).isRequired
-};
-
 ProjectHolder.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -174,6 +139,5 @@ PortfolioContent.propTypes = {
   selectedType: PropTypes
     .oneOf(['all', 'ngo', 'fullStack', 'react', 'vue', 'jquery', 'd3', 'backEnd']).isRequired
 };
-
 
 export default PortfolioContent;
