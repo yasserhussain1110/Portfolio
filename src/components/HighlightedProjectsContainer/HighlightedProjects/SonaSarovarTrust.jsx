@@ -20,7 +20,7 @@ const SonaSarovarTrust = ({showing}) => (
         rel="noopener noreferrer"
         href={SonaSarovar.codeUrl}
       >
-        {SonaSarovarTrust.name}
+        {SonaSarovar.name}
       </a>
     </h3>
 
