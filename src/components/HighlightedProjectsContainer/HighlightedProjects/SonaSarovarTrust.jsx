@@ -16,7 +16,7 @@ const SonaSarovarTrust = ({showing}) => (
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://github.com/yasserhussain1110/sona-sarovar-trust"
+        href={ngoProjects[0].codeUrl}
       >
         SonaSarovarTrust
       </a>
@@ -30,7 +30,7 @@ const SonaSarovarTrust = ({showing}) => (
           target="_blank"
           rel="noopener noreferrer"
           className="highlight"
-          href="http://www.sonasarovartrust.org"
+          href={ngoProjects[0].liveUrl}
         >
           SonaSarovarTrust
         </a>.
@@ -48,8 +48,13 @@ const SonaSarovarTrust = ({showing}) => (
         to more <b>awareness</b>, <b>volunteer support</b> and <b>donations</b>.
       </p>
 
+      <p>
+        Technologies used in this app include&nbsp;
+        <span className="highlight">Node, MongoDB, Vue</span>.
+      </p>
+
       <div>
-        <p>This app has following features-</p>
+        <p><span className="highlight">SonaSarovarTrust</span> has following features-</p>
         <ul>
           <li>
             Engaging UI for visitiors
@@ -77,10 +82,23 @@ const SonaSarovarTrust = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/yasserhussain1110/sona-sarovar-trust"
+          href={ngoProjects[0].codeUrl}
           className="highlight"
         >
           Github Page
+        </a>.
+      </p>
+
+      <p>
+        You can also look at the
+        &nbsp;
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={ngoProjects[0].liveUrl}
+          className="highlight"
+        >
+          Live App
         </a>.
       </p>
     </div>

@@ -5,68 +5,52 @@ import fullStack from '../../../lib/data/projects/fullStack';
 const BookTradingApp = ({showing}) => (
   <div
     style={{display: showing ? 'block' : 'none'}}
-    className="sona-sarovar-trust highlighted-project"
+    className="book-trading-app highlighted-project"
   >
 
     <div className="col-xs-offset-2 col-xs-8 img-container">
-      <img alt="Sona Sarovar Trust" src={fullStack[0].bgImageUrl} />
+      <img alt="Book Trading App" src={fullStack[0].bgImageUrl} />
     </div>
 
     <h3 className="col-xs-12 text-center">
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://github.com/yasserhussain1110/sona-sarovar-trust"
+        href={fullStack[0].codeUrl}
       >
-        SonaSarovarTrust
+        Book Trading App
       </a>
     </h3>
 
     <div className="col-xs-offset-1 col-xs-10 project-details-container">
       <p>
-        Full Stack single page web application for Non-Profit Organisation
-        &nbsp;
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className="highlight"
-          href="http://www.sonasarovartrust.org"
-        >
-          SonaSarovarTrust
-        </a>.
+        Book Trading App for trading books.
       </p>
 
       <p>
-        SonaSarovarTrust works for&nbsp;
-        <span className="highlight">
-          education, health and nourishment of slum children in Mumbai
-        </span>.
+        This app helps people trade books and keep track of books they have traded.
       </p>
 
       <p>
-        This app will hopefully allow them to improve their online presence, leading
-        to more <b>awareness</b>, <b>volunteer support</b> and <b>donations</b>.
+        Technologies used in this app include&nbsp;
+        <span className="highlight">Node, MongoDB, Vue</span>.
       </p>
 
       <div>
-        <p>This app has following features-</p>
+        <p><span className="highlight">BookTradingApp</span> has following features-</p>
         <ul>
           <li>
-            Engaging UI for visitiors
+            User can look at all books belonging to all users.
           </li>
 
           <li>
-            Integration with <span className="special">Online Payment Services</span>
-            &nbps;for easier donation.
+            User can add a new book. The backend of this app uses Google&quot;s book API for
+            &nbsp; searching books.
           </li>
 
           <li>
-            Way for volunteer to get in touch with site admins.
-          </li>
-
-          <li>
-            Full featured <span className="special">Admin Panel</span>
-            &nbsp;for updating site and adding contents.
+            <span className="highligh">Open/Close/Accept/Reject</span> trade requests to trade
+            &nbsp; books.
           </li>
         </ul>
       </div>
@@ -77,10 +61,23 @@ const BookTradingApp = ({showing}) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/yasserhussain1110/sona-sarovar-trust"
+          href={fullStack[0].codeUrl}
           className="highlight"
         >
           Github Page
+        </a>.
+      </p>
+
+      <p>
+        You can also look at the
+        &nbsp;
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={fullStack[0].liveUrl}
+          className="highlight"
+        >
+          Live App
         </a>.
       </p>
     </div>
