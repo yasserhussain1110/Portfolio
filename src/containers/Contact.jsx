@@ -7,16 +7,6 @@ const Contact = () => (
     </div>
 
     <div className="contact-info-holder col-xs-12 text-center">
-      <div className="contact">
-        <div className="field">
-          <i className="fa fa-phone" />
-          <strong className="field-name">Phone</strong>
-        </div>
-
-        <div className="value">
-          <p>+40 746 672 080</p>
-        </div>
-      </div>
 
       <div className="contact">
         <div className="field">
