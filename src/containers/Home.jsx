@@ -101,8 +101,8 @@ const Home = () => (
         <p>
           Since the Node is mostly used with MongoDB, I started to learn MongoDB as well.
           This is the first NoSQL database I came across, and it was totally different from
-          what I had seen before namely MySQL. This makes MongoDB very flexible and I totally
-          MongoDB for that.
+          what I had seen before namely MySQL. But it didn&apos;t take me long to see the
+          merits of NoSQL and particularly those of MongoDB.
         </p>
 
         <p>
