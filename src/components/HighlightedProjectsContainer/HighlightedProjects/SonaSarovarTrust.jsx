@@ -52,7 +52,7 @@ const SonaSarovarTrust = ({showing}) => (
 
       <p>
         Technologies used in this app include&nbsp;
-        <span className="highlight">Node, MongoDB, Vue</span>.
+        <span className="highlight">Node, MongoDB, React</span>.
       </p>
 
       <div>
