@@ -64,7 +64,7 @@ const SonaSarovarTrust = ({showing}) => (
 
           <li>
             Integration with <span className="special">Online Payment Services</span>
-            &nbps;for easier donation.
+            &nbsp;for easier donation.
           </li>
 
           <li>
